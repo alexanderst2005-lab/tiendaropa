@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useStore } from '../context/StoreContext';
-import { Instagram, Facebook, Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 const Footer = () => {
   const { storeConfig } = useStore();
@@ -16,8 +16,8 @@ const Footer = () => {
               Tu estilo, tu esencia. Moda premium para la mujer moderna.
             </p>
             <div style={{display: 'flex', gap: '15px'}}>
-              <a href="#"><Instagram size={20} /></a>
-              <a href="#"><Facebook size={20} /></a>
+              <a href="#" style={{color: 'var(--color-light-gray)', textDecoration: 'underline'}}>Instagram</a>
+              <a href="#" style={{color: 'var(--color-light-gray)', textDecoration: 'underline'}}>Facebook</a>
             </div>
           </div>
           
