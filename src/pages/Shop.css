@@ -1,0 +1,132 @@
+/* Shop Layout */
+.shop-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--color-light-gray);
+  padding-bottom: 15px;
+}
+
+.shop-filters {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border: 1px solid var(--color-black);
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  background-color: var(--color-black);
+  color: white;
+}
+
+/* Sidebar Sidebar */
+.shop-sidebar {
+  width: 100%;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+}
+
+.filter-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--color-light-gray);
+  padding-bottom: 5px;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-label input[type="checkbox"], 
+.filter-label input[type="radio"] {
+  accent-color: var(--color-black);
+}
+
+.color-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.color-swatch.active {
+  outline: 2px solid var(--color-black);
+  outline-offset: 2px;
+}
+
+/* Sort Select */
+.sort-select {
+  padding: 8px 12px;
+  border: 1px solid var(--color-black);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  background-color: transparent;
+  outline: none;
+}
+
+/* Products Grid */
+.shop-products {
+  width: 100%;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+/* Mobile Filters Modal */
+.mobile-filters {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .shop-layout {
+    flex-direction: row;
+  }
+  .shop-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+  }
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
